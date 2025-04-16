@@ -1,9 +1,18 @@
-<div class="container">
-  <div class="row">
+<div class="container d-flex flex-column">
+  <div class="row justify-content-center">
     <div class="col-4">
+      <div class="add-citation">
+        <%= link_to "Ajouter une citation", new_citation_path %>
+      </div>
       <h1>Citations</h1>
+
         <% @citations.each do |citation| %>
-        <%= citation.auteur %>
+          <%= link_to citation_path(citation) do %>
+            <div class="citations-card">
+              <p class="text-truncate"><%= citation.contenu %></p>
+              <%= citation.auteur %>
+              </div>
+            <% end %>
         <% end %>
     </div>
   </div>

@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="citation-show">
+    <%= @citation.contenu %>
+    <%= @citation.auteur %>
+  </div>
+  <%= link_to edit_citation_path(@citation) do %>
+    <i class="fa-solid fa-pen-to-square"></i>
+  <% end %>
+  <%= link_to citation_path(@citation), data: { turbo_method: :delete, turbo_confirm: "Are you sure" } do  %>
+  <i class="fa-solid fa-trash"></i>
+  <% end %>
+</div>

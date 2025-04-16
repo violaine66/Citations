@@ -1,0 +1,10 @@
+<div class="form">
+  <div class="form-content">
+    <%= simple_form_for(@citation) do |f| %>
+    <%= f.input :contenu %>
+    <%= f.input :auteur %>
+    <%= f.input :categorie %>
+    <%= f.submit "Créer", class:"btn-creer"%>
+    <% end %>
+  </div>
+</div>
