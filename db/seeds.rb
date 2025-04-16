@@ -8,6 +8,7 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 Citation.destroy_all
+
 citations = [
   {
     contenu: "Ce n’est pas parce que les choses sont difficiles que nous n’osons pas, c’est parce que nous n’osons pas qu’elles sont difficiles.",
@@ -58,6 +59,58 @@ citations = [
     contenu: "Le chagrin est un honneur que l’on rend à ce qui a compté.",
     auteur: "Delphine Horvilleur",
     categorie: "deuil"
+  },
+
+  # Nouvelles citations
+  {
+    contenu: "La lumière ne brille jamais autant que dans l’obscurité.",
+    auteur: "Victor Hugo",
+    categorie: "espoir"
+  },
+  {
+    contenu: "Le bonheur n’est réel que lorsqu’il est partagé.",
+    auteur: "Christopher McCandless",
+    categorie: "vie"
+  },
+  {
+    contenu: "C’est dans le silence que l’on entend le mieux son propre cœur.",
+    auteur: "Anonyme",
+    categorie: "introspection"
+  },
+  {
+    contenu: "Tu n’es jamais trop vieux pour te fixer un nouvel objectif ou rêver un nouveau rêve.",
+    auteur: "C.S. Lewis",
+    categorie: "motivation"
+  },
+  {
+    contenu: "Il y a des fleurs partout pour qui veut bien les voir.",
+    auteur: "Henri Matisse",
+    categorie: "inspiration"
+  },
+  {
+    contenu: "Le temps guérit ce que la raison ne peut apaiser.",
+    auteur: "Sénèque",
+    categorie: "guérison"
+  },
+  {
+    contenu: "Aime comme si tu n’avais jamais été blessé.",
+    auteur: "Alfred de Musset",
+    categorie: "amour"
+  },
+  {
+    contenu: "Le courage, c’est de comprendre sa propre vie.",
+    auteur: "Jean-Paul Sartre",
+    categorie: "philosophie"
+  },
+  {
+    contenu: "La paix commence avec un sourire.",
+    auteur: "Mère Teresa",
+    categorie: "présence"
+  },
+  {
+    contenu: "L’obscurité ne peut pas chasser l’obscurité, seule la lumière le peut.",
+    auteur: "Martin Luther King Jr.",
+    categorie: "espoir"
   }
 ]
 
@@ -65,5 +118,4 @@ citations.each do |citation|
   Citation.create!(citation)
 end
 
-puts "🌱 10 citations semées avec amour."
-
+puts "🌱 20 citations semées avec amour."

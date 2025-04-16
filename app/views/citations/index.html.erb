@@ -1,20 +1,23 @@
 <div class="container d-flex flex-column">
-  <div class="row justify-content-center">
-    <div class="col-4 ">
-      <h1>Citations</h1>
+  <div class="justify-content-center">
+    <div class="citations">
+
         <% @citations.each do |citation| %>
-          <%= link_to citation_path(citation) do %>
-            <% if citation.categorie == "philosophie" %>
-                <div class="citations-card-philosophie">
-              <% else %>
-                <div class="citations-card">
-              <% end %>
-              <p class="text-truncate"><%= citation.contenu %></p>
-              <%= citation.auteur %>
-              </div>
+        <%= link_to citation_path(citation) do %>
+          <% if citation.categorie == "philosophie" %>
+              <div class="citations-card-philosophie">
+            <% else %>
+              <div class="citations-card">
             <% end %>
+            <p class="text-truncate"><%= citation.contenu %></p>
+            <%= citation.auteur %>
+            <div class="d-flex align-items-end justify-content-end">
+              <p class = "categorie"><em><%= citation.categorie %></em></p>
+            </div>
+            </div>
+          <% end %>
         <% end %>
+      </div>
     </div>
   </div>
-</div>
 </div>
