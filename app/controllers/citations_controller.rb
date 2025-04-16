@@ -20,6 +20,11 @@ class CitationsController < ApplicationController
     end
   end
 
+  def random
+    citation_random = Citation.order("RANDOM()").take
+    redirect_to citation_path(citation_random)
+  end
+
   def edit
     @citation = Citation.find(params[:id])
   end

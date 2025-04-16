@@ -4,6 +4,9 @@
       <div class="add-citation d-flex justify-content-end">
         <%= link_to "Ajouter une citation", new_citation_path %>
       </div>
+      <div class="random-citation">
+        <%= link_to "Une citation au hasard", random_citation_path%>
+      </div>
       <h1>Citations</h1>
 
         <% @citations.each do |citation| %>
