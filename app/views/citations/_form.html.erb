@@ -1,10 +1,16 @@
-<div class="form">
-  <div class="form-content">
-    <%= simple_form_for(@citation) do |f| %>
-    <%= f.input :contenu %>
-    <%= f.input :auteur %>
-    <%= f.input :categorie %>
-    <%= f.submit "Créer", class:"btn-creer"%>
-    <% end %>
+<div class="container">
+  <div class="row d-flex justify-content-center align-items-center">
+    <div class="col-6">
+      <div class="form">
+        <div class="form-content">
+          <%= simple_form_for(@citation) do |f| %>
+          <%= f.input :contenu %>
+          <%= f.input :auteur %>
+          <%= f.input :categorie %>
+          <%= f.submit "Créer", class:"btn-creer"%>
+          <% end %>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
