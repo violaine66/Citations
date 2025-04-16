@@ -1,9 +1,12 @@
 <div class="home-container">
-  <div class="home">
-    <%= link_to citations_path do %>
-    <p class="mes-citations text-dark">
-      Mes citations
-    </p>
-  <% end %>
+  <div class="home d-flex flex-column justify-content-center align-items-center">
+    <div class="mes-citations d-flex flex-column justify-content-center align-items-center">
+      <p >Mes citations</p>
+       <div class="links d-flex justify-content-center">
+      <p><%= link_to "Voir toutes les citations", citations_path, class:"btn-home"%></p>
+      <p><%= link_to "Ajouter une citation", new_citation_path , class:"btn-home" %></p>
+      <p><%= link_to "Une citation au hasard", random_citation_path, class:"btn-home" %></p>
+    </div>
+    </div>
   </div>
 </div>

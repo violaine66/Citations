@@ -1,0 +1,25 @@
+.btn-home {
+  margin: 10px 20px;
+  padding: 10px 20px;
+  background-color: pink;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Masquer les liens par défaut */
+.links {
+  opacity: 0; /* Les liens sont invisibles */
+  visibility: hidden; /* Les liens sont cachés du flux de la page */
+  transition: opacity 0.3s ease, visibility 0s linear 0.3s; /* Ajout d'une transition */
+}
+
+/* Afficher les liens lorsque le parent (la citation) est survolé */
+.mes-citations:hover .links {
+  transform: translateY(0);
+  opacity: 1; /* Les liens deviennent visibles */
+  visibility: visible; /* Les liens sont rendus visibles */
+  transition: opacity 0.3s ease; /* L'animation de l'opacité */
+}
